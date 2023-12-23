@@ -38,7 +38,7 @@ class RecipeSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'title', 'time_minutes', 'price', 'link', 'tags',
             'ingredients',
-                  ]
+        ]
         read_only_fields = ['id']
 
     def _get_or_create_ingredients(self, ingredients, recipe):
@@ -103,4 +103,4 @@ class RecipeImageSerializer(serializers.ModelSerializer):
         model = Recipe
         fields = ['id', 'image']
         read_only_fields = ['id']
-        extra_kwargs = {'image': {'required': True}}
+        extra_kwargs = {'image': {'required': 'True'}}
