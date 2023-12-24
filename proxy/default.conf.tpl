@@ -1,5 +1,6 @@
 server {
     listen ${LISTEN_PORT};
+    server_name recipe.gibdev.io;
 
     location /static {
         alias /vol/static;
